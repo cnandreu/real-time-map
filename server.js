@@ -11,10 +11,8 @@ server.listen(3000);
 app.use('/public', express.static(__dirname + '/public'));
 
 app.get('/', function (req, res) {
-	console.log('dsfsdfd');
 	res.sendfile(__dirname + '/public/index.html');
 });
-
 
 io.sockets.on('connection', function (socket) {
 
