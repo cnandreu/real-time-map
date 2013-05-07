@@ -1,0 +1,23 @@
+{
+  "name": "real-time-map",
+  "version": "0.0.1",
+  "description": "Google map with auto updating markers using node.js and socket.io ",
+  "main": "server.js",
+  "dependencies": {
+    "express": "~3.2.2",
+    "socket.io": "~0.9.14"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cnandreu/real-time-map.git"
+  },
+  "author": "Carlos Andreu",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "gitHead": "1f39d1ec5356a54f69faf56bc0bfc2ec55c70c28"
+}
