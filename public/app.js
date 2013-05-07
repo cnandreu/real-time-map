@@ -102,24 +102,16 @@
 
 			var player;
 
-			//no players in the array
-			if (_.isEmpty(players)) {
+			//find the player using data.title (e.g. 'player1')
+			player = _locatePlayer(player, data);
+
+			if (_.isObject(player)) {
+				//player found, update it
+				_updatePlayerObject(player, data);
+			} else {
+				//player not found, create it
 				_createPlayer(data);
-
-			} else { //players exist in the array
-
-				//find the player using data.title (e.g. 'player1')
-				player = _locatePlayer(player, data);
-
-				if (_.isObject(player)) {
-					//player found, update it
-					_updatePlayerObject(player, data);
-				} else {
-					//player not found, create it
-					_createPlayer(data);
-				}
 			}
-
 
 		});//end updateMarker socket.io event
 
